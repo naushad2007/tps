@@ -132,7 +132,7 @@ const IndexPage = ({ initialWords }: initialProps) => {
 
   const restartHandler = () => {
     clearInterval(intervalRef.current);
-    setWords(shuffleWord(numberOfWords, "easy_en"));
+    setWords(shuffleWord(numberOfWords, language));
     setWordInput("");
     setIsInputCorrect(true);
 

@@ -25,7 +25,7 @@
     <a href="https://github.com/gimenezpablonl/typing-test"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/gimenezpablonl/typing-test">View Demo</a>
+    <a href="https://gimenezpablonl-typing-test.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/gimenezpablonl/typing-test/issues">Report Bug</a>
     ·
@@ -62,8 +62,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## Summary 
-[gif gif gif gif gif gif gif gif](https://example.com)
-
+![demo](https://user-images.githubusercontent.com/37600947/114434386-55664780-9b99-11eb-9058-7ffbfe018f9e.gif)
 
 ### Built With
 

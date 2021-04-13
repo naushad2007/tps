@@ -8,6 +8,7 @@ import Timer from "../components/Timer";
 import RestartButton from "../components/RestartButton";
 import Records from "../components/Records";
 import { shuffleWord } from "../utils/shuffleWord";
+import Footer from "../components/Footer";
 
 type initialProps = {
   initialWords: string[];
@@ -135,7 +136,6 @@ const IndexPage = ({ initialWords }: initialProps) => {
     setWords(shuffleWord(numberOfWords, language));
     setWordInput("");
     setIsInputCorrect(true);
-
     setCorrectKeystroke(0);
     setWrongKeystroke(0);
     setCorrection(0);
@@ -213,23 +213,7 @@ const IndexPage = ({ initialWords }: initialProps) => {
           </div>
         </div>
       </div>
-      <footer className="md:absolute md:bottom-0 md:w-full">
-        <div>
-          <div className="container py-5 mx-auto flex justify-center">
-            <p className="text-sm font-medium text-indigo-600">
-              © {new Date().getFullYear()} Made by
-              <a
-                href="https://github.com/gimenezpablonl"
-                rel="noopener noreferrer"
-                className="ml-1"
-                target="_blank"
-              >
-                <span className="font-semibold">gimenezpablonl</span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };

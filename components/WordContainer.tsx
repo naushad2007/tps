@@ -7,7 +7,7 @@ type Props = {
 
 const WordContainer: React.FC<Props> = (props) => {
   return (
-    <div className="max-h-32 overflow-hidden border-indigo-300 border-4 p-3 lg:p-4 leading-9 md:leading-12">
+    <div className="max-h-32 overflow-hidden border-indigo-300 border-4 p-3 lg:p-4 leading-9 md:leading-[3rem]">
       <span
         className={`font-medium text-2xl md:text-3xl lg:text-4xl ${
           props.isInputCorrect ? "bg-indigo-300" : "bg-red-500"

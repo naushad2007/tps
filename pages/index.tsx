@@ -11,7 +11,7 @@ import { shuffleWord } from "../utils/shuffleWord";
 import Footer from "../components/Footer";
 
 const IndexPage = () => {
-  const [words, setWords] = useState<string[]>(shuffleWord(200, "easy_en"));
+  const [words, setWords] = useState<string[]>([""]);
   const [wordInput, setWordInput] = useState<string>("");
   const [language, setLanguage] = useState<string>("easy_en");
   const [isInputCorrect, setIsInputCorrect] = useState<boolean>(true);
@@ -33,6 +33,7 @@ const IndexPage = () => {
   const intervalRef = useRef<any>(null);
 
   useEffect(() => {
+    setWords(shuffleWord(numberOfWords, language));
     const userRecords = localStorage.getItem(language.concat("_records"));
     const records = userRecords ? JSON.parse(userRecords) : ([] as number[]);
     setRecords(records);
@@ -61,7 +62,6 @@ const IndexPage = () => {
   }, [timer, correctKeystroke, language]);
 
   const languageHandler = (newLanguage: string) => {
-    setWords(shuffleWord(numberOfWords, newLanguage));
     setLanguage(newLanguage);
   };
   const timerHandler = () => {

@@ -10,12 +10,8 @@ import Records from "../components/Records";
 import { shuffleWord } from "../utils/shuffleWord";
 import Footer from "../components/Footer";
 
-type initialProps = {
-  initialWords: string[];
-};
-
-const IndexPage = ({ initialWords }: initialProps) => {
-  const [words, setWords] = useState<string[]>(initialWords);
+const IndexPage = () => {
+  const [words, setWords] = useState<string[]>(shuffleWord(200, "easy_en"));
   const [wordInput, setWordInput] = useState<string>("");
   const [language, setLanguage] = useState<string>("easy_en");
   const [isInputCorrect, setIsInputCorrect] = useState<boolean>(true);
@@ -217,14 +213,5 @@ const IndexPage = ({ initialWords }: initialProps) => {
     </>
   );
 };
-
-export async function getStaticProps() {
-  const initialWords = shuffleWord(200, "easy_en");
-  return {
-    props: {
-      initialWords,
-    },
-  };
-}
 
 export default IndexPage;

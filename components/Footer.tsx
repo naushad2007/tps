@@ -8,12 +8,12 @@ const Footer: React.FC = () => (
           <p className="text-sm font-medium text-indigo-600">
             © {new Date().getFullYear()} Made by
             <a
-              href="https://github.com/gimenezpablonl"
+              href="https://github.com/naushad2007"
               rel="noopener noreferrer"
               className="ml-1"
               target="_blank"
             >
-              <span className="font-semibold">gimenezpablonl</span>
+              <span className="font-semibold">naushad2007</span>
             </a>
           </p>
         </div>
